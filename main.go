@@ -18,7 +18,7 @@ import (
 	"log"
 
 	"github.com/elastic/beats/libbeat/beat"
-	"github.com/mheese/journalbeat/beater"
+	"github.com/temal-/journalbeat/beater"
 )
 
 func main() {

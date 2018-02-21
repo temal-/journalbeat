@@ -22,6 +22,11 @@ endif
 TAGS := $(foreach t,$(TAGS),$(IMAGE_NAME):$(t))
 
 #
+# Make the build directory
+#
+build: Dockerfile build/journalbeat
+
+#
 # Clean up the project
 #
 clean:
@@ -34,11 +39,6 @@ clean:
 #
 Dockerfile:
 	cp docker/dockerfile.build Dockerfile
-
-#
-# Make the build directory
-#
-build: Dockerfile build/journalbeat
 
 #
 # Build the journalbeat go image using docker
