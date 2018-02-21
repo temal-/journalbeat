@@ -47,7 +47,7 @@ build/journalbeat:
 	mkdir -p build
 	docker build -t $(IMAGE_BUILD_NAME) .
 	docker run --name $(IMAGE_BUILD_NAME) $(IMAGE_BUILD_NAME)
-	-docker cp $(IMAGE_BUILD_NAME):/go/src/github.com/mheese/journalbeat/journalbeat build/journalbeat
+	-docker cp $(IMAGE_BUILD_NAME):/go/src/github.com/temal-/journalbeat/journalbeat build/journalbeat
 	docker rm $(IMAGE_BUILD_NAME)
 	docker rmi $(IMAGE_BUILD_NAME)
 
